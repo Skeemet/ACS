@@ -1,0 +1,13 @@
+conda activate venv_acd
+pip install opencv-contrib-python
+pip install configparser
+pip install python-barcode
+piip install weasyprint
+pip install qrcode
+pip install pil
+pip install Pillow
+
+pip install pyzbar
+pip install pyzbar[scripts]
++ you need to install Visual C++ Redistributable Packages for Visual Studio 2013
+https://www.microsoft.com/fr-fr/download/confirmation.aspx?id=40784
