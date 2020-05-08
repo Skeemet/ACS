@@ -17,9 +17,7 @@ Le fonctionnement est détaillé dans la [documentation](doc/intro.md)
 
 # Avancement  
 :white_check_mark: Implémentation des fonctionalités essentielles  
-:zzz: Prise de photo automatique par un robot collaboratif 
-> Cette section a été temporairement mise en pause, faute d'accés à la platforme
-
+:zzz: Prise de photo automatique par un robot collaboratif (Cette section a été temporairement mise en pause, faute d'accés à la platforme)
 :construction: Ecriture d'une documentation (en construction)
 - [ ] Génération d'un rapport clair sur le contrôle d'un vérin
 - [ ] Tests de robustesse permettant de déterminer 
