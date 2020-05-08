@@ -54,4 +54,6 @@ python -m pip install pyzbar
 python -m pip install pyzbar[scripts]
 ```
 
-De plus, assurez-vous que _Visual C++ Redistributable Packages for Visual Studio 2013_ soit installé. Vous pouvez le téléchargez ici :arrow_forward: [https://www.microsoft.com/fr-fr/download/confirmation.aspx?id=40784 :link:](https://www.microsoft.com/fr-fr/download/confirmation.aspx?id=40784)
+De plus, assurez-vous que _Visual C++ Redistributable Packages for Visual Studio 2013_ soit installé. Vous pouvez le téléchargez ici :arrow_forward: [https://www.microsoft.com/fr-fr/download/confirmation.aspx?id=40784 :link:](https://www.microsoft.com/fr-fr/download/confirmation.aspx?id=40784)  
+
+Ajoutez un dossier `actuators/temp`
