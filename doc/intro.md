@@ -1,6 +1,6 @@
 # ACS
 # Introduction
-ACS est l'acronyme de Automatic Control Station. Dans notre cas, il s'agit de vérifier des vérins **mais l'outil est bien plus performant que cela** (cf §Personnalisation).  
+ACS est l'acronyme de Automatic Control Station. Dans notre cas, il s'agit de vérifier des vérins **mais l'outil est bien plus performant que cela** (cf §Personalisation).  
 Nous sommes sur une ligne qui produit des vérins variés. Etant donné la multitude de configurations possibles, nous vérifions que des composants sont présents sur le vérin.
 
 image d'un vérin et image de composants
@@ -36,7 +36,7 @@ Sur la face E est lue un QR code. Celui-ci permet d'indiquer la configuration at
 La reconnaissance de composant s'effectue via un algorithme de _template matching_. Cela consiste à rechercher une petite image (appelée  _template_), qui représente la caractéristique recherchée, dans une autre image (celle d'une face de vérin).  
 
 Pour ce faire, pour chaque pixel de la grande image, un calcul matriciel est fait avec les pixels du _template_.
-Comme le montre l'image ci-dessous (tirée de la documantation opencv).
+Comme le montre l'image ci-dessous (tirée de la documentation opencv).
 
 ![](img/template_matching_theory.jpg)  
 Il existe une multitude de calcul matriciel différents pour réaliser cette opération
@@ -98,7 +98,7 @@ Un exemple est présent ci-dessous.
 
 > :pushpin: Ce n'est pas grave si le template ne représente pas l'intégralité du composant. Il doit juste représenter une partie qui est unique à ce composant et seulement à ce celui-ci comme vous pouvez le voir juste au-dessus :arrow_down_small:.
 
-## Personaliser un test avancé (changement de la méthde de reconnaissance)
+## Personaliser un test avancé (changement de la méthode de reconnaissance)
 Le test standard permet seulement de déterminer la présence ou l'absence d'un composant. C'est déjà une fonctionnalité assez puissante mais qui reste cependant limité. Ainsi, si vous voulez par exemple vous assurez qu'en plus d'être présent le composant soit à droite, vous allez être amené à écrire vos propres tests.  
 
 Il faut ajouter une méthode à la classe _Test_. :pencil2: Nommez la nouvelle méthode sous la forme *<nom_methode>_test*, cela permettra d'y voir plus clair dans votre code. Vous devriez obtenir une ligne comme ceci
