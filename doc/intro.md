@@ -3,7 +3,6 @@
 ACS est l'acronyme de Automatic Control Station. Dans notre cas, il s'agit de vérifier des vérins **mais l'outil est bien plus performant que cela** (cf §Personalisation).  
 Nous sommes sur une ligne qui produit des vérins variés. Etant donné la multitude de configurations possibles, nous vérifions que des composants sont présents sur le vérin.
 
-image d'un vérin et image de composants
 Pour ce rendre compte de la grande diversité du système, voici une infime partie des composants installables 
 ![](img/exemple_verin.png)
 
