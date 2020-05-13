@@ -34,7 +34,7 @@ cd ACS
 
 2. Clonez le répertoire 
 ```
-git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+git clone https://github.com/Skeemet/ACS
 ```
 
 3. Installez les dépendances
