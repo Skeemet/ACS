@@ -20,8 +20,7 @@ Le fonctionnement est détaillé dans la [documentation](doc/intro.md)
 :zzz: Prise de photo automatique par un robot collaboratif (Cette section a été temporairement mise en pause, faute d'accés à la platforme)  
 :construction: Ecriture d'une documentation (en construction)
 - [ ] Génération d'un rapport clair sur le contrôle d'un vérin
-- [ ] Tests de robustesse permettant de déterminer 
-- [ ] Tests unitaires permettant de s'assurer 
+- [ ] Tests de robustesse permettant de s'assurer que l'on puisse détecter les composants malgré les variations de fond  
 
 # Installation
 Notez que j'utilise la version `3.6.8` de python. Je vous conseille aussi de créer un environment virtuel. 
