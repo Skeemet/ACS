@@ -13,6 +13,9 @@ from shutil import copyfile
 import cv2
 import numpy as np
 
+import subprocess
+import csv
+
 import sys
 from pyzbar import pyzbar
 
@@ -327,7 +330,8 @@ class Test():
         template = cv2.cvtColor(template, cv2.COLOR_BGR2GRAY)
         w, h = template.shape[::-1]
         
-        res = cv2.matchTemplate(img_gray.astype(np.uint8),template.astype(np.uint8),cv2.TM_CCOEFF_NORMED)
+        #res = cv2.matchTemplate(img_gray.astype(np.uint8),template.astype(np.uint8),cv2.TM_CCOEFF_NORMED)
+        res = cv2.matchTemplate(img_gray.astype(np.uint8),template.astype(np.uint8),getattr(cv2, self.template_matching_strategy))
         threshold = self.threshold
         loc = np.where( res >= threshold)
         for pt in zip(*loc[::-1]):
@@ -335,7 +339,7 @@ class Test():
     
         cv2.imwrite(self.source_path+"actuators/" + self.directory_name + '/find_photo/' + self.test_name +'_' + self.picture_to_analyse + '.jpg', img_rgb)
         
-        #todo: analyse situation and create message
+        #TODO: analyse situation and create message
         self.write_report(True, "Success")
         return True
     
