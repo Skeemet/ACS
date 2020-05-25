@@ -1,6 +1,14 @@
 # A faire
 Nous détaillons ici les améliorations qui sont à apporter au système. Des pistes d'implémentation sont explicitées afin de faciliter leur mise en place.
 
+# Sommaire
+[Introduction]()  
+[Description détaillée](detailed_description.md)  
+* [Classe _Control_]()
+* [Classe _Test_]()  
+
+[**A faire  (cette page)**](todo.md)
+
 ## Tests de robustesse
 La reconnaissance d'image n'est pas une science excate. Ainsi, lorsque l'on développe un système, il faut s'assurer que le système est robuste
 > On dit qu'un système est __robuste__ lorsque'il fonctionne dans des conditions dégradées. 

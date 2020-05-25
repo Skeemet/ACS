@@ -1,11 +1,19 @@
 # Descritpion détaillée
 Dans cette partie, nous détaillerons que les points techniques difficiles à comprendre. Pour le reste des fonctions, relativement simple, il suffit de se reporter au code qui est commenté.
 
-## Mécanismes généraux
+# Sommaire
+[Introduction]()  
+[**Description détaillée  (cette page)**](detailed_description.md)  
+* [Classe _Control_]()
+* [Classe _Test_]()  
+
+[A faire](todo.md)
+
+# Mécanismes généraux
 ### L'environment
 Dans python, les chemins absolus sont définis par rapport à l'endroit où est appelé le ficher qui execute la ligne. Ainsi, que l'on exécute `actuator_checker.py` depuis `ACS\` ou depuis `ACS\source` le chemin de base, appelé `source_path` est défini en `ACS\`.  
 
-## Classe _Control_
+# Classe _Control_
 C'est la classe qui gère les contrôles. Elle réalise une multitude de test. Elle gère aussi le système de fichiers qui est détaillé ci-dessous.
 
 systèmes de fichiers actuators_445_D0
@@ -41,7 +49,7 @@ Pour avoir plus de détail sur les résultats de chaque test en cas d'échec, vo
 
 ![](img/result_test.png)
 
-## Classe _Test_
+# Classe _Test_
 Cette classe réalise un test. Le point le plus technique est que l'on utilise la méthode qui est précisée dans le fichier de configuration `ACS/config/actuators_config.cfg`. Pour cela, on utilise la méthode python `getattr()`
 
 > Notez que c'est cette astuce qui permet de pouvoir utiliser une méthode qui est précisée dans le fichier de configuration et que l'on peut donc personnaliser chaque test.

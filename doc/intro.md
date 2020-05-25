@@ -8,7 +8,7 @@ Pour ce rendre compte de la grande diversité du système, voici une infime part
 
 # Sommaire
 [**Introduction (cette page)**]()  
-[Description détaillée]()  
+[Description détaillée](detailed_description.md)  
 * [Classe _Control_]()
 * [Classe _Test_]()  
 
