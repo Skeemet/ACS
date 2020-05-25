@@ -1,4 +1,4 @@
 [v];<raccord_test>;Success
 [v];<tube>;Le tube est au mauvais endroit
 [v];<capteur>;Presence du capteur
-[v];<flasque>;le flasque est mal fixe
+[v];<flasque>;Le flasque est mal fixé
