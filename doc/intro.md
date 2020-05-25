@@ -12,6 +12,7 @@ Pour ce rendre compte de la grande diversité du système, voici une infime part
 [Description détaillée]()  
 * [Classe _Control_]()
 * [Classe _Test_]()
+[A faire](todo.md)
 
 
 # Fonctionnement
