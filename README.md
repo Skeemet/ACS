@@ -1,4 +1,5 @@
-# ACS
+# ACS  
+![](doc/img/acs_logo_small.png)  
 A software to create a control station in a industrial environment.
 
 # Introduction
