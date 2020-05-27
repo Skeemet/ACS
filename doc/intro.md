@@ -7,7 +7,7 @@ Pour ce rendre compte de la grande diversité du système, voici une infime part
 ![](img/exemple_verin.png)
 
 # Sommaire
-[**Introduction (cette page)**]()  
+[**Introduction (cette page)**](intro.md)  
 [Description détaillée](detailed_description.md)  
 * [Classe _Control_]()
 * [Classe _Test_]()  

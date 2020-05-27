@@ -2,7 +2,7 @@
 Nous détaillons ici les améliorations qui sont à apporter au système. Des pistes d'implémentation sont explicitées afin de faciliter leur mise en place.
 
 # Sommaire
-[Introduction]()  
+[Introduction](intro.md)  
 [Description détaillée](detailed_description.md)  
 * [Classe _Control_]()
 * [Classe _Test_]()  

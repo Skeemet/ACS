@@ -2,7 +2,7 @@
 Dans cette partie, nous détaillerons que les points techniques difficiles à comprendre. Pour le reste des fonctions, relativement simples, il suffit de se reporter au code qui est commenté.
 
 # Sommaire
-[Introduction]()  
+[Introduction](intro.md)  
 [**Description détaillée  (cette page)**](detailed_description.md)  
 * [Classe _Control_]()
 * [Classe _Test_]()  
