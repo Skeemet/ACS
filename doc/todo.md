@@ -54,7 +54,9 @@ Nous n'avons pas pû développer cet axe puisque nous n'avions plus accès aux v
 
 
 ## Génération de rapport
-Nous avions prévu la génération d'un rapport de contrôle à la fin de celui-ci. Par manque de temps, nous n'avons pas pu l'implémenter mais le plus gros a déjà été fait. Le script qui génère le rapport est disponible dans `ACS/source/modules/clean_report_generation`
+Nous avions prévu la génération d'un rapport de contrôle à la fin de celui-ci. Par manque de temps, nous n'avons pas pu l'implémenter mais le plus gros a déjà été fait. Le script qui génère le rapport est disponible dans `ACS/source/modules/clean_report_generation.py`. Il génère le rapport ci-dessous.
+
+![](img/rapport_detaille.png)
 
 On peut aussi améliorer ce script en insérant les photos résultats de chaque test. Ainsi, dans le rapport, on pourrait comprendre un peu plus ce qui a été détecté à chaque test.
 
