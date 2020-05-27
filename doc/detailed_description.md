@@ -1,5 +1,5 @@
-# Descritpion détaillée
-Dans cette partie, nous détaillerons que les points techniques difficiles à comprendre. Pour le reste des fonctions, relativement simple, il suffit de se reporter au code qui est commenté.
+# Description détaillée
+Dans cette partie, nous détaillerons que les points techniques difficiles à comprendre. Pour le reste des fonctions, relativement simples, il suffit de se reporter au code qui est commenté.
 
 # Sommaire
 [Introduction]()  
@@ -11,22 +11,21 @@ Dans cette partie, nous détaillerons que les points techniques difficiles à co
 
 # Mécanismes généraux
 ### L'environment
-Dans python, les chemins absolus sont définis par rapport à l'endroit où est appelé le ficher qui execute la ligne. Ainsi, que l'on exécute `actuator_checker.py` depuis `ACS\` ou depuis `ACS\source` le chemin de base, appelé `source_path` est défini en `ACS\`.  
+Dans python, les chemins absolus sont définis par rapport à l'endroit où est appelé le fichier qui exécute la ligne. Ainsi, que l'on exécute `actuator_checker.py` depuis `ACS\` ou depuis `ACS\source` le chemin de base, appelé `source_path` est défini en `ACS\`.  
 
 # Classe _Control_
-C'est la classe qui gère les contrôles. Elle réalise une multitude de test. Elle gère aussi le système de fichiers qui est détaillé ci-dessous.
+C'est la classe qui gère les contrôles. Elle réalise une multitude de tests. Elle gère aussi le système de fichiers qui est détaillé ci-dessous.
 
-systèmes de fichiers actuators_445_D0
 ### Nom des dossiers
 
 
 
 ### Système de fichier
-Un contrôle génère beaucoup de données, il faut les ranger correctement sinon il sera difficile d'accéder aux infos à posteriori. Les infos des vérins contrôllés sont enregistrées dans le dossier `ACS\actuators`.  
+Un contrôle génère beaucoup de données, il faut les ranger correctement sinon il sera difficile d'accéder aux infos à postériori. Les infos des vérins contrôlés sont enregistrées dans le dossier `ACS\actuators`.  
 
-Toutes les données d'un contrôle sont enregistrés dans un seul et même dossier. Il est nommé dans un style similaire à `actuators_164_D0`. `164` est un seulement un incrément juste pour s'assurer que deux dossiers n'ai pas le même nom. Ainsi, si on test deux fois le même vérin, l'incrément sera différent. Il est donc différent d'un numéro unique associé à un vérin (type _MAC_).  `D0` réfère à la configuration attendue du vérin. Cela est déterminé par lecture du QR code. 
+Toutes les données d'un contrôle sont enregistrées dans un seul et même dossier. Il est nommé dans un style similaire à `actuators_164_D0`. `164` est un seulement un incrément juste pour s'assurer que deux dossiers n'aient pas le même nom. Ainsi, si on test deux fois le même vérin, l'incrément sera différent. Il est donc différent d'un numéro unique associé à un vérin (type _MAC_).  `D0` réfère à la configuration attendue du vérin. Cela est déterminé par lecture du QR code. 
 
-> Rappel : Les nms des configurations sont [personnalisables](intro.md#personaliser-une-configuration)
+> Rappel : Les noms des configurations sont [personnalisables](intro.md#personaliser-une-configuration)
 
 L'architecure-type est représentée ci-dessous.
 
@@ -38,14 +37,14 @@ On y retrouve les dossiers suivants :
 - `report_photo` détient différents éléments nécessaires à la génération du rapport. On a donc les résultats de chaque test et le rapport.
 
 ### Le dossier `temp`
-L'algorithme prend les photos puis détecte le QR code afin de déterminer la configuration souhaitée du vérin. On a donc un moment où l'on a les images mais on n'a pas le nom du dossier. Elles sont donc temporairement stockées dans le dossier `ACS/actuators/temp`
+L'algorithme prend les photos puis détecte le QR code afin de déterminer la configuration souhaitée du vérin. On a donc un moment où l'on a les images, mais on n'a pas le nom du dossier. Elles sont donc temporairement stockées dans le dossier `ACS/actuators/temp`
 
 ### Jugement
 > Le jugement est l'action de déterminer si un vérin est bon ou mauvais.  
 
-Chaque test renvoie une valeure booléenne `True` ou `False`. Il s'agit donc seulement de réaliser le produit booléen de tous les tests afin de déterminer le résultat global du contrôle.
+Chaque test renvoie une valeur booléenne `True` ou `False`. Il s'agit donc seulement de réaliser le produit booléen de tous les tests afin de déterminer le résultat global du contrôle.
 
-Pour avoir plus de détail sur les résultats de chaque test en cas d'échec, vous pouvez vous reporter au fichier `actuator_XXX_D0/report/result_test.txt`. Il ressemble à ça. Evidemment, il est fait pour être lu par la machine et non par un humain.
+Pour avoir plus de détail sur les résultats de chaque test en cas d'échec, vous pouvez vous reporter au fichier `actuator_XXX_D0/report/result_test.txt`. Il ressemble à ça, évidemment, il est fait pour être lu par la machine et non par un humain.
 
 ![](img/result_test.png)
 
