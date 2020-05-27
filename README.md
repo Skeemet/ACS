@@ -3,28 +3,28 @@
 A software to create a control station in a industrial environment.
 
 # Introduction
- Cet outil permet de photographer un vérin automatiquement, déterminer les composants qui sont censés être installés (configuration souhaitée), analyser les images afin d'obtenir la configuration réelle.  
+ Cet outil permet de photographier un vérin automatiquement, déterminer les composants qui sont censés être installés (configuration souhaitée), analyser les images afin d'obtenir la configuration réelle.  
  
- Ensuite, en analysant les configurations souhaitées et réelles, l'outil est capable de déterminer si le vérin est bon ou si quelque chose s'est mal passée lors de la production (composant non monté sur le vérin ou à la mauvaise place par exemple). 
+ Ensuite, en analysant les configurations souhaitées et réelles, l'outil est capable de déterminer si le vérin est bon ou si quelque chose s'est mal passé lors de la production (composant non monté sur le vérin ou à la mauvaise place par exemple). 
 
 # Cadre global
-Ce projet a été rélaisé dans le cadre de l'usine agile 4.0 qui représente une production de vérin dans un but pédagogique. Il est réalisé en coopération avec de nombreuses équipes qui travaillent toutes sur des points particuliers.  
+Ce projet a été réalisé dans le cadre de l'usine agile 4.0 qui représente une production de vérin dans un but pédagogique. Il est réalisé en coopération avec de nombreuses équipes qui travaillent toutes sur des points particuliers.  
 
-Dans une production de vérins variées (de multiples composants peuvent être ajoutés pour personaliser le vérin), le contrôle de leur configuration avant l'envoit au client est essentielle, d'où cet outil.
+Dans une production de vérins variée (de multiples composants peuvent être ajoutés pour personalliser le vérin), le contrôle de leur configuration avant l'envoi au client est essentiel, d'où cet outil.
 
 
 # Fonctionnement
 Le fonctionnement est détaillé dans la [documentation](doc/intro.md)
 
 # Avancement  
-:white_check_mark: Implémentation des fonctionalités essentielles  
-:zzz: Prise de photo automatique par un robot collaboratif (Cette section a été temporairement mise en pause, faute d'accés à la platforme)  
-:construction: Ecriture d'une documentation (en construction)
+:white_check_mark: Implémentation des fonctionnalités essentielles  
+:zzz: Prise de photo automatique par un robot collaboratif (Cette section a été temporairement mise en pause, faute d'accès à la plateforme)  
+:white_check_mark: Ecriture d'une documentation
 - [ ] Génération d'un rapport clair sur le contrôle d'un vérin
 - [ ] Tests de robustesse permettant de s'assurer que l'on puisse détecter les composants malgré les variations de fond  
 
 # Installation
-Notez que j'utilise la version `3.6.8` de python. Je vous conseille aussi de créer un environment virtuel. 
+Notez que j'utilise la version `3.6.8` de python. Je vous conseille aussi de créer un environement virtuel. 
 
 1. Ouvrez l'invité de commande dans le dossier de votre choix et créez un dossier
 ```
