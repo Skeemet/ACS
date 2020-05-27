@@ -30,7 +30,9 @@ from pyzbar import pyzbar
 # last digit is a control key
 
 class Control:
+    """Class control manage test of one actuator which require multiple individual test"""
     def __init__(self):
+        """Init source path. See documentation for further details"""
         #init source path
         # source_path is the path of the ACS folder
         # '/../' if __main__='__main__'
@@ -66,6 +68,7 @@ class Control:
     def take_photo(self):
         """Take photo of an actuator.
         For this it interracts with raspberry pi and UR10.
+        For now, it just move files because we cannot take photo with UR-10
         """
         
         #implementation with rpi pins and ur10
@@ -212,6 +215,7 @@ class Control:
         
         
     def determine_tests_to_do(self):
+        """Tests to do are strore in config file in ACS/config/actuator_config.cfg"""
         
         config_directory = self.source_path+'config/'
         config_filname = 'actuator_config.cfg'
@@ -224,6 +228,7 @@ class Control:
         self.l_test = l_test
         
     def run_tests(self):
+        """Perform all test include in self.l_test"""
         l_result =  [] #list of booleen result
         for test_name in self.l_test:
             print("test name ", test_name)
@@ -236,6 +241,10 @@ class Control:
         self.l_result = l_result
             
     def is_actuator_ok(self):
+        """Determine if actuator is ok. 
+        If all test succeed then the control succeed.
+        If one test fail  then the control fail.
+        """
         l = self.l_result
         result = True
         for elem in l:
@@ -245,7 +254,10 @@ class Control:
         return True
         
     def make_judgment(self):
-        
+        """ Perform following actions:
+        - print in console if control succeed or fail
+        - save metadata of the control (time, global result)
+        """
         #get if actuator ok
         is_actuator_ok = self.is_actuator_ok()
         
@@ -265,7 +277,7 @@ class Control:
         
         
 class Test():
-    
+    """Manage to check one component on actuator"""
     def __init__(self, test_name, expected_configuration, directory_name, report):
         """e.g.
         expected_configuration -> 'D0'
@@ -312,12 +324,14 @@ class Test():
         print(vars(self))
     
     def run(self):
+        """Run test according method declared in ACS/config/tests.cfg file"""
         print("\nTest is running")
         
         #run method requeste by the test in config file
         return getattr(self, self.methode_to_use)()
         
     def standard_test(self):
+        """Implementation of the most basic test. It detects a component by use of a template-matching algorithm"""
         
         #to describe metrix
         # https://docs.opencv.org/2.4/doc/tutorials/imgproc/histograms/template_matching/template_matching.html
@@ -340,10 +354,13 @@ class Test():
         cv2.imwrite(self.source_path+"actuators/" + self.directory_name + '/find_photo/' + self.test_name +'_' + self.picture_to_analyse + '.jpg', img_rgb)
         
         #TODO: analyse situation and create message
+        #TODO: create a scenario that use self.write_report(False, "Composant absent")
         self.write_report(True, "Success")
         return True
     
     def write_report(self, is_success, message):
+        """Each test of one composant has a result and (optionally) a message.
+        Write those data in report file at ACS/actuators/<actuator_number>/report/result_test.txt"""
         
         print("\nWriting report")
         if is_success == True:
