@@ -11,7 +11,7 @@ Nous détaillons ici les améliorations qui sont à apporter au système. Des pi
 
 ## Tests de robustesse
 La reconnaissance d'image n'est pas une science exacte. Ainsi, lorsque l'on développe un système, il faut s'assurer que le système est robuste.
-> On dit qu'un système est __robuste__ lorsque'il fonctionne dans des conditions dégradées. 
+> On dit qu'un système est __robuste__ lorsqu'il fonctionne dans des conditions dégradées. 
 
 Dans notre cas, ces conditions dégradées peuvent être provoquées par :
 
@@ -19,7 +19,7 @@ Dans notre cas, ces conditions dégradées peuvent être provoquées par :
 
 - La position. En effet, si les vérins ne sont pas positionnés tous au même endroit à chaque contrôle alors ils n'ont pas la même taille lorsque l'on prend une photo. C'est donc une nouvelle source de variabilité. Afin de contrer cet effet, nous avons préféré faire une mise en place isostatique du vérin. Les fichiers 3D ont été réalisés, mais n'ont pas pû être testé. Des ajustements sont sûrement à prévoir.
 
-- Une conséquence directe de la position est le flou. En effet, l'appareil photo utilisé a une distance focale fixe. Ainsi, prendre une image floue, qui est plus difficile à analyser (comme pour un humain en somme), peut arriver bien plus rapidement qu'on ne le pense.
+- Une conséquence directe de la position est le flou. En effet, l'appareil photo utilisé a une distance focale fixe. Ainsi, prendre une image floue peut arriver bien plus rapidement qu'on ne le pense. Or elle est plus difficile à analyser (comme pour un humain en somme). 
 Ce problème est corrigé en programmant correctement la trajectoire du robot collaboratif.
 
 - La luminosité. C'est la bête noire des algorithmes de reconnaissance d'image. C'est sûrement l'élément auquel il faut faire le plus attention. Nous discuterons ci-dessous la manière dont nous avions prévue de vérifier la robustesse face à ce paramètre.
@@ -47,7 +47,7 @@ Un exemple de tableau est représenté ci-dessous. Les valeurs sont inventées d
 Nous souffrons d'un cruel manque de photo pour compléter une analyse décrite ci-dessus.
 
 ## Préciser les tests
-En fonction de ce qui est nécessaire, il se peut que l'on attende d'un test de vérifier qu'un composant soit à droite ou à gauche ou bien même imaginer des tests un peu plus _exotiques_.
+En fonction de ce qui est nécessaire, il se peut que l'on attende d'un test qu'il vérifie qu'un composant soit à droite ou à gauche ou bien même imaginer des tests un peu plus _exotiques_.
 Nous n'avons pas pû développer cet axe puisque nous n'avions plus accès aux vérins.
 
 > Pour rappel l'ajout de test est précisé [ici](intro.md#personaliser-un-test-avancé-changement-de-la-méthode-de-reconnaissance)
@@ -58,6 +58,6 @@ Nous avions prévu la génération d'un rapport de contrôle à la fin de celui-
 
 ![](img/rapport_detaille.png)
 
-On peut aussi améliorer ce script en insérant les photos résultats de chaque test. Ainsi, dans le rapport, on pourrait comprendre un peu plus ce qui a été détecté à chaque test.
+On peut aussi améliorer ce script en insérant les photos résultants de chaque test (chaque test produit une image avec le composant qu'il a détecté encadré en rouge). Ainsi, dans le rapport, on pourrait comprendre un peu plus ce qui a été détecté à chaque test.
 
 > Vous aurez seulement à comprendre comment le script actuel fonctionne afin de l'ajouter dans le fichier `actuator_checker.py`

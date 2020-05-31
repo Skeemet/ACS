@@ -1,5 +1,5 @@
 # Description détaillée
-Dans cette partie, nous détaillerons que les points techniques difficiles à comprendre. Pour le reste des fonctions, relativement simples, il suffit de se reporter au code qui est commenté.
+Dans cette partie, nous détaillerons que les points techniques difficiles à comprendre. Pour autres fonctions, relativement simples, il suffit de se reporter au code qui est commenté.
 
 # Sommaire
 [Introduction](intro.md)  
@@ -11,7 +11,7 @@ Dans cette partie, nous détaillerons que les points techniques difficiles à co
 
 # Mécanismes généraux
 ### L'environment
-Dans python, les chemins absolus sont définis par rapport à l'endroit où est appelé le fichier qui exécute la ligne. Ainsi, que l'on exécute `actuator_checker.py` depuis `ACS\` ou depuis `ACS\source` le chemin de base, appelé `source_path` est défini en `ACS\`.  
+Dans python, les chemins absolus sont définis par rapport à l'endroit où est appelé le fichier qui exécute la ligne. Ainsi,que l'on exécute `actuator_checker.py` depuis `ACS\` ou depuis `ACS\source` le chemin de base, appelé `source_path`, est défini en `ACS\`.  
 
 # Classe _Control_
 C'est la classe qui gère les contrôles. Elle réalise une multitude de tests. Elle gère aussi le système de fichiers qui est détaillé ci-dessous.
@@ -23,7 +23,7 @@ C'est la classe qui gère les contrôles. Elle réalise une multitude de tests. 
 ### Système de fichier
 Un contrôle génère beaucoup de données, il faut les ranger correctement sinon il sera difficile d'accéder aux infos à postériori. Les infos des vérins contrôlés sont enregistrées dans le dossier `ACS\actuators`.  
 
-Toutes les données d'un contrôle sont enregistrées dans un seul et même dossier. Il est nommé dans un style similaire à `actuators_164_D0`. `164` est un seulement un incrément juste pour s'assurer que deux dossiers n'aient pas le même nom. Ainsi, si on test deux fois le même vérin, l'incrément sera différent. Il est donc différent d'un numéro unique associé à un vérin (type _MAC_).  `D0` réfère à la configuration attendue du vérin. Cela est déterminé par lecture du QR code. 
+Toutes les données d'un contrôle sont enregistrées dans un seul et même dossier. Il est nommé dans un style similaire à `actuators_164_D0`. `164` est seulement un incrément juste pour s'assurer que deux dossiers n'aient pas le même nom. Ainsi, si on test deux fois le même vérin, l'incrément sera différent. Il est donc différent d'un numéro unique associé à un vérin (type _MAC_).  `D0` réfère à la configuration attendue du vérin qui est déterminée par lecture du QR code. 
 
 > Rappel : Les noms des configurations sont [personnalisables](intro.md#personaliser-une-configuration)
 
@@ -44,11 +44,11 @@ L'algorithme prend les photos puis détecte le QR code afin de déterminer la co
 
 Chaque test renvoie une valeur booléenne `True` ou `False`. Il s'agit donc seulement de réaliser le produit booléen de tous les tests afin de déterminer le résultat global du contrôle.
 
-Pour avoir plus de détail sur les résultats de chaque test en cas d'échec, vous pouvez vous reporter au fichier `actuator_XXX_D0/report/result_test.txt`. Il ressemble à ça, évidemment, il est fait pour être lu par la machine et non par un humain.
+Pour avoir plus de détail sur les résultats de chaque test en cas d'échec, vous pouvez vous reporter au fichier `actuator_XXX_D0/report/result_test.txt`. Il ressemble à ça l'image ci-dessous. Il est fait pour être lu par la machine et non par un humain.
 
 ![](img/result_test.png)
 
 # Classe _Test_
 Cette classe réalise un test. Le point le plus technique est que l'on utilise la méthode qui est précisée dans le fichier de configuration `ACS/config/actuators_config.cfg`. Pour cela, on utilise la méthode python `getattr()`
 
-> Notez que c'est cette astuce qui permet de pouvoir utiliser une méthode qui est précisée dans le fichier de configuration et que l'on peut donc personnaliser chaque test.
+> Notez que c'est cette astuce qui permet de pouvoir utiliser une méthode qui est précisée dans le fichier de configuration et donc que chaque test est personnalisable.
