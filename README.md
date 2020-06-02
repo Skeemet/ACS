@@ -14,7 +14,15 @@ Dans une production de vérins variée (de multiples composants peuvent être aj
 
 
 # Fonctionnement
-Le fonctionnement est détaillé dans la [documentation](doc/intro.md)
+![](doc/img/step.png)  
+Le fonctionnement se déroule en 4 étapes : 
+1. Prise en photo des 5 faces du vérin
+2. Analyse du QR code afin de déterminer la configuration
+3. Repérage des composants à partir des photos
+4. Vérification de la correspondance entre les composants identifiés et attendus.
+
+
+Des explications détaillées sont disponibles dans la [documentation](doc/intro.md).
 
 # Avancement  
 :white_check_mark: Implémentation des fonctionnalités essentielles  
