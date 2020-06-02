@@ -5,7 +5,7 @@ A software to create a control station in a industrial environment.
 # Introduction
  Cet outil permet de photographier un vérin automatiquement, déterminer les composants qui sont censés être installés (configuration souhaitée), analyser les images afin d'obtenir la configuration réelle.  
  
- Ensuite, en analysant les configurations souhaitées et réelles, l'outil est capable de déterminer si le vérin est bon ou si quelque chose s'est mal passé lors de la production (composant non monté sur le vérin ou à la mauvaise place par exemple). 
+ Ensuite, en analysant les configurations souhaitées et réelles, l'outil est capable de déterminer si le vérin est bon ou si quelque chose s'est mal passée lors de la production (composant non monté sur le vérin ou à la mauvaise place par exemple). 
 
 # Cadre global
 Ce projet a été réalisé dans le cadre de l'usine agile 4.0 qui représente une production de vérin dans un but pédagogique. Il est réalisé en coopération avec de nombreuses équipes qui travaillent toutes sur des points particuliers.  
