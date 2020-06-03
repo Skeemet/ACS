@@ -27,9 +27,10 @@ Des explications détaillées sont disponibles dans la [documentation](doc/intro
 # Avancement  
 :white_check_mark: Implémentation des fonctionnalités essentielles  
 :zzz: Prise de photo automatique par un robot collaboratif (Cette section a été temporairement mise en pause, faute d'accès à la plateforme)  
-:white_check_mark: Ecriture d'une documentation
-- [ ] Génération d'un rapport clair sur le contrôle d'un vérin
-- [ ] Tests de robustesse permettant de s'assurer que l'on puisse détecter les composants malgré les variations de fond  
+:white_check_mark: Ecriture d'une documentation  
+:memo: Implémentation de tests particuliers (Documenté mais pas réalisé par manque de données)  
+:memo: Génération d'un rapport clair sur le contrôle d'un vérin (Présence d'un exemple clair et documenté)  
+- [ ] Tests de robustesse permettant de s'assurer que l'on puisse détecter les composants malgré les variations de fond (Non réalisé par manque de données)  
 
 # Installation
 Notez que j'utilise la version `3.6.8` de python. Je vous conseille aussi de créer un environement virtuel. 
