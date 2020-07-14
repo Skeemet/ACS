@@ -37,7 +37,11 @@ On y retrouve les dossiers suivants :
 - `report_photo` détient différents éléments nécessaires à la génération du rapport. On a donc les résultats de chaque test et le rapport.
 
 ### Le dossier `temp`
-L'algorithme prend les photos puis détecte le QR code afin de déterminer la configuration souhaitée du vérin. On a donc un moment où l'on a les images, mais on n'a pas le nom du dossier. Elles sont donc temporairement stockées dans le dossier `ACS/actuators/temp`
+L'algorithme prend les photos puis détecte le QR code afin de déterminer la configuration souhaitée du vérin. On a donc un moment où l'on a les images, mais on n'a pas le nom du dossier. Elles sont donc temporairement stockées dans le dossier `ACS/actuators/temp`  
+
+Si la méthode de détection des QR codes venait à ne pas être assez robuste, il faudrait réorganiser l'ordre des opérations. On prendrait les photos du vérin, on les place dans un dossier `actuator_<n° d'itération>` et _ensuite_ on réalise la lecture du QR code. Ainsi, en cas d'incapacité de détermination du QR code, les images seraient dans un dossier spécifique et non dans le dossier `temp` qui est effacé à chaque noouveau vérin testé.  
+
+Cette nouvelle organisation permettrait de garder les traces de tous les vérins qui n'ont pas pu être analysés, ce qui est pratique quant on fait de l'amélioration continue.  
 
 ### Jugement
 > Le jugement est l'action de déterminer si un vérin est bon ou mauvais.  
